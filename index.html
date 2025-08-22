@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Velt Lexical Editor</title>
+
+  <style>
+    #chatgpt-v1-editor {
+      border: 1px solid #ccc;
+      padding: 10px;
+      min-height: 100px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    #chatgpt-v1-editor:focus {
+      outline: none;
+    }
+  </style>
+
+  <style>
+    /* Add to your styles.css */
+    .editor-wrapper {
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      margin: 10px 0;
+    }
+
+    #lexical-editor {
+      min-height: 200px;
+      outline: none;
+    }
+
+    #lexical-state,
+    #lexical-clean-state {
+      width: 100%;
+      height: 150px;
+      font-family: monospace;
+      font-size: 12px;
+      margin: 5px 0;
+    }
+
+    button {
+      margin: 5px;
+      padding: 8px 16px;
+      background: #007acc;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #005a9e;
+    }
+
+    #clear-storage-btn {
+      background: #dc3545;
+    }
+
+    #clear-storage-btn:hover {
+      background: #c82333;
+    }
+  </style>
+
+  <style>
+    .app-header {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      width: 100%;
+    }
+
+    .app-title {
+      margin: 0;
+      font-size: 1.8rem;
+      font-weight: 600;
+    }
+
+    .login-section {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .app-content {
+      flex: 1;
+      padding: 1rem;
+      background-color: #f8f9fa;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+  </style>
+
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+  </style>
+
+  <!-- roboto font -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header class="app-header">
+    <h1 class="app-title">Velt Lexical Editor</h1>
+    <div class="login-section">
+      <velt-comment-tool></velt-comment-tool>
+      <velt-sidebar-button></velt-sidebar-button>
+    </div>
+  </header>
+
+  <div id="app"></div>
+  <script src="/src/main.ts" type="module"></script>
+
+  <velt-comments></velt-comments>
+  <velt-comments-sidebar></velt-comments-sidebar>
+
+  <!-- Velt -->
+  <script src="/src/velt.ts" type="module"></script>
+</body>
+
+</html>
